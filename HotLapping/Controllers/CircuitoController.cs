@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HotLapping.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HotLapping.Controllers
 {
@@ -6,6 +7,19 @@ namespace HotLapping.Controllers
     {
         public IActionResult Index()
         {
+            new Circuito
+            {
+                CircuitoID = 0,
+                Nome = "Interlagos",
+                Pais = "Brasil",
+                Cidade = "São Paulo",
+                Tamanho = "4,309",
+                NumeroCurvas = "15",
+                Recorde = "Teste",
+                RecordePiloto = "Teste",
+                RecordeCarro = "Teste",
+                Imagem = "string.Empty"
+            };
             return View();
         }
 
@@ -13,5 +27,6 @@ namespace HotLapping.Controllers
         {
             return View();
         }
+
     }
 }

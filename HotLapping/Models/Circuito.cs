@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime;
 
 namespace HotLapping.Models
 {
     public class Circuito
     {
-        public int Id { get; set; }
+        public int CircuitoID { get; set; }
         [Required]
         public string Nome { get; set; }
         [Required]
@@ -21,11 +22,24 @@ namespace HotLapping.Models
         public string RecordePiloto { get; set; }
         [Required]
         public string RecordeCarro { get; set; }
-        [Required]
-        public string Tipo { get; set; }
+       
         [Required]
         public string Imagem { get; set; }
 
-      
+        public Circuito()
+        {
+            CircuitoID = 0;
+            Nome = "Interlagois";
+            Pais = "Brasil";
+            Cidade = "São Paulo";
+            Tamanho = "4,309";
+            NumeroCurvas = "15";
+            Recorde = "Teste";
+            RecordePiloto = "Teste";
+            RecordeCarro = "Teste";
+            
+            Imagem = "string.Empty";
+        }
+
     }
 }

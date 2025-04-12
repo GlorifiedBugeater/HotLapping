@@ -1,3 +1,5 @@
+using HotLapping.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -31,5 +33,6 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "carro",
     pattern: "{controller=Carro}/{action=Index}/{id?}");
+
 
 app.Run();
